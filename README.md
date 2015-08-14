@@ -12,7 +12,7 @@ A small wrapper around [WebdriverIO](http://webdriver.io), that eases testing on
    The boilerplate example given by the testingbot.com node.js wizard is
    reduced to
 
-	  var webdriverjs = require('tbwdjs');
+	  var webdriverjs = require('testingbot');
      var client = webdriverjs.remote({
          host: 'hub.testingbot.com',
          desiredCapabilities: {
@@ -80,13 +80,13 @@ A small wrapper around [WebdriverIO](http://webdriver.io), that eases testing on
   Included are convenience methods to query the TestingBot API.
   Please have a look at this example to access the api only:
 
-    var tbwdjs  = require('tbwdjs');
-    var t = tbwdjs.api({ api_key: 'key', api_secret: 'secret'});
+    var testingbot  = require('testingbot');
+    var t = testingbot.api({ api_key: 'key', api_secret: 'secret'});
     t.getBrowsers(function(browsers) { console.log(browsers); });
 
   You can always access the api during tests with your client-object:
 
-    var webdriverjs = require('tbwdjs');
+    var webdriverjs = require('testingbot');
     var client = webdriverjs.remote({
         host: 'hub.testingbot.com',
         desiredCapabilities: {
